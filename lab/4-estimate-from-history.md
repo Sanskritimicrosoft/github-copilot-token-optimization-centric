@@ -1,5 +1,7 @@
 # Lab 4 - Estimate the next task from your own data
 
+*Stretch lab 4 of 5 · about 15 minutes · needs Node.js 22+ and the GitHub CLI (`gh`) · [Back to the overview](../README.md)*
+
 **In this lab you will:** turn the recordings from Lab 1 into something useful — ask the agent to size a brand-new task twice, once on general knowledge and once on your repo's recorded actuals, and compare what each answer was based on.
 
 This is what the recording step was for. Sizing gets better because you measured, not because you got wiser.

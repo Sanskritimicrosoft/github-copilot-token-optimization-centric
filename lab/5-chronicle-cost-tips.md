@@ -1,6 +1,8 @@
-# This is a take home lab. Try it in your own time.
-
 # Lab 5 - Ask your sessions where the money went
+
+*Stretch lab 5 of 5 · take-home · about 5 minutes · [Back to the overview](../README.md)*
+
+**This is a take-home lab.** Try it in your own time.
 
 **In this lab you will:** turn the four labs you just ran into feedback on how *you* work — where your tokens actually went, and what to do differently next time.
 

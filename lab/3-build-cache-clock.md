@@ -1,5 +1,7 @@
 # Lab 3 - Build a live cache clock
 
+*Stretch lab 3 of 5 · about 10 minutes · continues from Lab 2 · needs Node.js 22+ · [Back to the overview](../README.md)*
+
 **In 10 minutes you will:** give Copilot one constrained build prompt, turn the Lab 2 notifier into a live model-cache countdown, and watch two CLI-reported expiry clocks tick while the session is idle.
 
 The completed solution is not on this branch. The supplied tests are the contract.

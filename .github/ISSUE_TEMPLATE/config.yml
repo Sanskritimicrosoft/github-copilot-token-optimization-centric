@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Workshop repo / questions
-    url: https://github.com/karolmckgh/github-copilot-token-optimization
-    about: Ask workshop questions here (discussion or during the session).
+  - name: Lab guide and questions
+    url: https://github.com/Sanskritimicrosoft/github-copilot-token-optimization-centric
+    about: The lab instructions are in the README. During the bootcamp, ask your presenters.

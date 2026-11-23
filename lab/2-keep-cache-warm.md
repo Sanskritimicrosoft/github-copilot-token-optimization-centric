@@ -1,5 +1,7 @@
 # Lab 2 - See cache continuity
 
+*Stretch lab 2 of 5 · about 10 minutes · [Back to the overview](../README.md)*
+
 **In 10 minutes you will:** run the same tiny turn across model and reasoning changes, watch Copilot CLI report cached-input reuse after every response, and compare the result when you return to a configuration you used before.
 
 This is an observation lab, not a cache contest. Zero reuse is valid evidence.

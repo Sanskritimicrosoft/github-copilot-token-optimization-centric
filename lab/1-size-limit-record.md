@@ -1,14 +1,16 @@
 # Lab 1 · Size it, cap it, record it
 
+*Stretch lab 1 of 5 · about 20 minutes · needs Node.js 22+ and the GitHub CLI (`gh`) · [Back to the overview](../README.md)*
+
 **In this lab you will:** take one real bug, estimate its AI-credit cost like a story point, cap your Copilot CLI session at that estimate, fix the bug with the agent, record what it actually cost — then price the identical fix on a frontier model and feel the difference.
 
-*(No environment yet? Do [Lab 0](../README.md) first.)*
+*(You met this bug in the [Fusion lab](fusion-same-task.md). No environment yet? Do [Lab 0](../README.md) first.)*
 
 ---
 
 ## 0 · Ready the lab
 
-Still inside Copilot CLI from Lab 0? `/exit` first. Then check the app runs — a live dashboard should appear (`q` to quit). Note the red CPU dot and the ALERT spam: that's the bug you're about to fix.
+Still inside Copilot CLI from the Fusion lab? `/exit` first. Then check the app runs — a live dashboard should appear (`q` to quit). Note the red CPU dot and the ALERT spam: that's the bug you're about to fix.
 
 ```bash
 node console/src/dash.mjs
@@ -56,7 +58,7 @@ Why 30 when the issue says XS ≤10? The CLI's minimum session limit is 30 — s
 /model
 ```
 
-Select **GPT-5.4 mini**: a small, cheap model that is plenty for a task this size. Model choice is a cost lever — step 6 will show you how big.
+Select **GPT-5.4 mini**: a small, cheap model that is plenty for a task this size. Model choice is a cost lever — step 6 will show you how big. Not in your list? Pick another model from the *Lightweight* category (press **Shift+Tab** in the picker to group models by category).
 
 ## 4 · Fix the bug
 
@@ -106,7 +108,7 @@ Then switch models:
 /model
 ```
 
-Select **Claude Opus 4.8** and re-run the identical prompt:
+Select **Claude Opus 4.8**, or the strongest model you have, and re-run the identical prompt:
 
 ```
 Fix issue #1: the CPU gauge shows red and the log spams ALERT even at ~30% load.
@@ -121,7 +123,7 @@ When it's done (`! node console/src/dash.mjs --once` — green dot again), check
 /usage
 ```
 
-Read the **Opus line** in the per-model breakdown — that's this fix; compare it with what Auto charged you in step 5. Then record the second data point on the same issue (this also keeps the next recording clean):
+Read the **Opus line** in the per-model breakdown — that's this fix; compare it with what the small model charged you in step 5. Then record the second data point on the same issue (this also keeps the next recording clean):
 
 ```
 ! node scripts/record-usage.mjs --issue 1 --from-session --comparison
@@ -135,7 +137,7 @@ Same bug, same prompt, same fix — a different invoice. That gap is the model l
 
 ## Takeaways
 
-- **Pick the model for the task, not by habit.** Auto routes to a capable-but-cheap model and takes 10% off the bill. A frontier model overthinks a small problem: in step 6 the identical one-line fix came back around **5× more expensive** on Opus 4.8. Save the big model for problems that are genuinely hard.
+- **Pick the model for the task, not by habit.** Copilot Fusion routes each task to a capable-but-cheap model for you, as you saw in the Fusion lab. A frontier model overthinks a small problem: in step 6 the identical one-line fix came back around **5× more expensive** on Opus 4.8. Save the big model for problems that are genuinely hard.
 - **Scope and specificity are the cheapest levers you have.** The bill is how much the agent must read and how often it has to guess. A narrow, precise ask is what makes a task XS — vague prompts are expensive prompts.
 - **Cap the session at your estimate.** The limit is a guardrail, not a target: let it stop a session that has drifted, and lift it only once you can see the work heading the right way. Tripping the cap is information, not failure.
 - **Record the actual on the work item.** A handful of recorded issues beats any generic pricing table — your codebase, your prompts, your numbers. Record the overruns especially; they build the estimation muscle faster than the tasks that went to plan.
@@ -153,7 +155,7 @@ Same bug, same prompt, same fix — a different invoice. That gap is the model l
 
 **Issue #2** (*Add latency panel with p99 sparkline*) is sized **S — 11–30 credits**. It's a real feature, not a bug — notice how the wider scope changes what the agent reads, and what that does to the meter.
 
-**1.** Switch back to **Auto** — step 6 left you on Opus:
+**1.** Switch back to a cheaper option — step 6 left you on Opus. Pick **Copilot Fusion** at **Standard**, or the small model from step 3:
 
 ```
 /model
