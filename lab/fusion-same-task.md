@@ -48,7 +48,7 @@ Open the model picker:
 /model
 ```
 
-Choose the **strongest model in your list**: Claude Opus if you have it, otherwise a model in the *Powerful* category, such as GPT-6.1 Sol. (Press **Shift+Tab** in the picker to group the list by category.) Leave the reasoning level at its default. This is the "Ferrari" from the talk. Write its name down.
+Run A model: pick GPT-6.1 Sol. If it isn't in your list, pick Claude Opus 5.5. If neither is there, press Shift+Tab in /model to group models by category, and pick any model under Powerful. Write its name down.
 
 Paste the prompt and press **Enter**. While it works, watch the timeline: every file it opens joins the context, and the context is sent again on every later step.
 
