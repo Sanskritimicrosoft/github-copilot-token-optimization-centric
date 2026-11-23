@@ -28,11 +28,6 @@ If Copilot CLI is open, close it:
 
 Every run starts in a **brand-new session**. That is the fair reset: the meter starts at zero and both runs get the same cold start. Use `/exit` and a new `copilot` command between runs, not `/clear`: `/clear` keeps the same session, so `/usage` would keep counting both runs.
 
-This is the task. Send it **word for word** in both runs. Use the copy button on the block; it is one line on purpose, so it pastes as one message:
-
-```text
-Summarise the Incident Console app in console/ for a developer who joins the team tomorrow: what it shows, how the files in console/src fit together, where the alert thresholds live, and how to run it and its tests. Flag anything that looks like a bug. Read only what you need. Do not edit files, and do not run the app or its tests. Max 200 words.
-```
 
 ## Step 1 · Run A: one strong model for everything (7 min)
 
@@ -51,6 +46,12 @@ Open the model picker:
 Run A model: pick GPT-6.1 Sol. If it isn't in your list, pick Claude Opus 5.5. If neither is there, press Shift+Tab in /model to group models by category, and pick any model under Powerful. Write its name down.
 
 Paste the prompt and press **Enter**. While it works, watch the timeline: every file it opens joins the context, and the context is sent again on every later step.
+
+This is the task. Send it **word for word** in both runs. Use the copy button on the block; it is one line on purpose, so it pastes as one message:
+
+```text
+Summarise the Incident Console app in console/ for a developer who joins the team tomorrow: what it shows, how the files in console/src fit together, where the alert thresholds live, and how to run it and its tests. Flag anything that looks like a bug. Read only what you need. Do not edit files, and do not run the app or its tests. Max 200 words.
+```
 
 If Copilot asks permission to run a command, say **yes** to read-only commands (`ls`, `cat`, `grep`, `find`) and **no** to anything that edits files or runs `node`.
 
@@ -79,6 +80,12 @@ copilot --model fusion --fusion-tier standard --max-ai-credits 60
 ```
 
 Check that the status line under the prompt box says Copilot Fusion. *(Prefer the picker? Start plain `copilot`, run `/model` and choose **Copilot Fusion**, then **Standard**.)*
+
+This is the task. Send it **word for word** in both runs. Use the copy button on the block; it is one line on purpose, so it pastes as one message:
+
+```text
+Summarise the Incident Console app in console/ for a developer who joins the team tomorrow: what it shows, how the files in console/src fit together, where the alert thresholds live, and how to run it and its tests. Flag anything that looks like a bug. Read only what you need. Do not edit files, and do not run the app or its tests. Max 200 words.
+```
 
 Paste the **same** prompt. Before it starts work, Fusion tells you which model it picked and why, for example *"Copilot Fusion selected <model> since the task has medium complexity."* Write that model down.
 
