@@ -35,19 +35,15 @@ Install the tools beforehand so setup takes five minutes on the day. Can't insta
 
 ## Lab 0 · Get set up (5 min)
 
-**You're done when:** Copilot CLI is open in **your own copy** of this repo and `/usage` responds.
+**You're done when:** Copilot CLI is open in **your clone** of this repo and `/usage` responds.
 
-### 1 · Create your own copy of this repo
+### 1 · Sign in with the right account
 
-The stretch labs create issues, labels and comments, so everyone works in their own copy, not this one.
+Sign in to github.com with the **GitHub account that has your Copilot licence for this bootcamp**.
 
-1. Sign in to github.com with the **GitHub account that has your Copilot licence for this bootcamp**. Whatever you create belongs to the account you're signed in with.
-2. At the top of this page, click the green **Use this template** button, then **Create a new repository**.
-3. Choose your account as the owner, give the repo a name and click **Create repository**.
+The core lab is read-only, so you don't need your own copy of this repo: you'll clone it directly. (Stretch labs 1 and 4 create issues, so they need your own fork. See the note under [Stretch labs](#stretch-labs).)
 
-No **Use this template** button, or your account is missing from the owner list? You're probably signed in with a different account. Switch accounts, or raise a hand.
-
-Now open Copilot CLI in your copy. Pick one:
+Now open Copilot CLI in a clone of this repo. Pick one:
 
 - **Copilot CLI installed on your laptop?** Go to [Option A](#option-a--copilot-cli-on-your-laptop).
 - **Can't install it, or it won't start?** Go to [Option B](#option-b--github-codespaces-nothing-to-install).
@@ -62,13 +58,22 @@ gh auth status
 
 It shows the wrong account, or none? Run `gh auth login` and sign in with the account from step 1.
 
-Clone your copy and start Copilot CLI in it:
+Clone this repo and go into it:
 
 ```bash
-gh repo clone <your-github-username>/<your-repo-name>
-cd <your-repo-name>
+gh repo clone Sanskritimicrosoft/github-copilot-token-optimization-centric
+cd github-copilot-token-optimization-centric
+```
+
+No `gh`? Use `git clone https://github.com/Sanskritimicrosoft/github-copilot-token-optimization-centric.git` instead.
+
+Then start Copilot CLI, either straight in this terminal:
+
+```bash
 copilot
 ```
+
+or in VS Code: run `code .`, open **Terminal → New Terminal**, and type `copilot` there.
 
 1. **Trust the folder** when Copilot CLI asks.
 2. **Sign in** if it asks you to: type `/login` and use the account that has your Copilot licence.
@@ -79,7 +84,7 @@ Continue to the [Fusion lab](lab/fusion-same-task.md).
 
 ### Option B · GitHub Codespaces (nothing to install)
 
-On the page of the repo you created in step 1: green **Code** button → **Codespaces** tab → **Create codespace on main**.
+On **this repo's page**: green **Code** button → **Codespaces** tab → **Create codespace on main**.
 
 <img src="https://docs.github.com/assets/cb-49943/mw-1440/images/help/codespaces/who-will-pay.webp" alt="Code → Codespaces → Create codespace on main" width="25%">
 
@@ -110,11 +115,16 @@ For fast finishers, or to take home. Each one stands alone unless the table says
 
 | Lab | What you'll do | Time | Needs |
 |---|---|---|---|
-| [1 · Size it, cap it, record it](lab/1-size-limit-record.md) | Fix the bug you found in the Fusion lab inside a credit budget, and record what it cost on the issue | About 20 min | Node.js 22+, `gh` |
+| [1 · Size it, cap it, record it](lab/1-size-limit-record.md) | Fix the bug you found in the Fusion lab inside a credit budget, and record what it cost on the issue | About 20 min | Node.js 22+, `gh`, your own fork |
 | [2 · See cache continuity](lab/2-keep-cache-warm.md) | Watch cached-input reuse change as you switch model and reasoning effort | 10 min | Nothing extra |
 | [3 · Build a live cache clock](lab/3-build-cache-clock.md) | Have Copilot build a cache-expiry countdown against a test suite | 10 min | Lab 2, Node.js 22+ |
-| [4 · Estimate from your own data](lab/4-estimate-from-history.md) | Size a new task from recorded actuals instead of a guess | About 15 min | Node.js 22+, `gh` |
+| [4 · Estimate from your own data](lab/4-estimate-from-history.md) | Size a new task from recorded actuals instead of a guess | About 15 min | Node.js 22+, `gh`, your own fork |
 | [5 · Ask your sessions where the money went](lab/5-chronicle-cost-tips.md) | Get cost tips drawn from your own session history | About 5 min, take-home | Nothing extra |
+
+> **Labs 1 and 4 need your own fork.** They create issues, labels and comments, so they must run in a repo you own, not this one.
+> 1. Click **Fork** at the top of this page and create the fork under your account.
+> 2. In your fork, go to **Settings → General → Features** and tick **Issues** (forks have Issues switched off by default).
+> 3. Clone your fork instead: `gh repo clone <your-github-username>/github-copilot-token-optimization-centric`
 
 ---
 
