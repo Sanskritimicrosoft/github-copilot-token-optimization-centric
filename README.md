@@ -43,12 +43,11 @@ Sign in to github.com with the **GitHub account that has your Copilot licence fo
 
 The core lab is read-only, so you don't need your own copy of this repo: you'll clone it directly. (Stretch labs 1 and 4 create issues, so they need your own fork. See the note under [Stretch labs](#stretch-labs).)
 
-Now open Copilot CLI in a clone of this repo. Pick one:
+Now open Copilot CLI in a clone of this repo:
 
-- **Copilot CLI installed on your laptop?** Go to [Option A](#option-a--copilot-cli-on-your-laptop).
-- **Can't install it, or it won't start?** Go to [Option B](#option-b--github-codespaces-nothing-to-install).
+- **Copilot CLI installed on your laptop?** Go to [A](#option-a--copilot-cli-on-your-laptop).
 
-### Option A · Copilot CLI on your laptop
+### A · Copilot CLI on your laptop
 
 Make sure the GitHub CLI is signed in with the same account:
 
@@ -79,23 +78,6 @@ or in VS Code: run `code .`, open **Terminal → New Terminal**, and type `copil
 2. **Sign in** if it asks you to: type `/login` and use the account that has your Copilot licence.
 3. **Update:** type `/update` so you're on the latest version.
 4. **Check:** type `/usage`. If it responds, you're done.
-
-Continue to the [Fusion lab](lab/fusion-same-task.md).
-
-### Option B · GitHub Codespaces (nothing to install)
-
-On **this repo's page**: green **Code** button → **Codespaces** tab → **Create codespace on main**.
-
-<img src="https://docs.github.com/assets/cb-49943/mw-1440/images/help/codespaces/who-will-pay.webp" alt="Code → Codespaces → Create codespace on main" width="25%">
-
-Wait about two minutes for the container to build. Then, in the codespace terminal, install the latest Copilot CLI and start it:
-
-```bash
-curl -fsSL https://gh.io/copilot-install | sudo bash
-copilot
-```
-
-The codespace already runs as your account, so there's nothing to sign in to. Type `/usage`. If it responds, you're done.
 
 Continue to the [Fusion lab](lab/fusion-same-task.md).
 
